@@ -15,15 +15,8 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am currently working on [PyTorch] at Meta where I started the [TorchDynamo]
-and [TorchInductor] projects, both of which are foundational parts of
-[PyTorch 2.0]. TorchDynamo is a Python-level JIT compiler designed to
-make unmodified PyTorch programs faster. TorchDynamo hooks into the frame
-evaluation API in CPython (PEP 523) to dynamically modify Python bytecode
-right before it is executed. TorchInductor is a new compiler backend for
-TorchDynamo that maps arbitrary PyTorch programs to [Triton] or C++/OpenMP.
-More recently I created [Helion], a Python-embedded DSL that streamlines
-authoring performance-portable ML kernels.
+Hello, I’m Abhishek Biswas currently a post graduate student at Department of biophysics, Delhi university.
+
 
 Before Meta, I was at GoDaddy helping build a deep learning platform
 for predicting small business behavior and personalizing experiences across
