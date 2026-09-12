@@ -15,40 +15,13 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hello, I’m Abhishek Biswas currently a post graduate student at Department of biophysics, Delhi university.
+Hello everyone, I am Abhishek Biswas, currently a postgraduate student in the [Department of Biophysics, Delhi University](https://biophysics.du.ac.in/). I have completed my undergraduate degree from Delhi University, where I have studied a basic foundation in biology and chemistry.
+
+I'm mostly interested in understanding biological systems through theoretical and quantitative approaches. I'm particularly interested in mathematical ecology (I don't know much yet, but I'm still learning and understanding). Previously, I worked with theoretical models of population dynamics, stochastic processes, and biochemical/biophysical approaches to understand the behavior and interaction of organisms and molecules.
+
+This is my personal website. I will put all my subject-related content here. I have attempted to disjoint my professional "academic" website from this one. [You can visit](https://abhishek9824.github.io/website/) (the website is still in progress and broken at this point).
+
+I will upload my notes, presentations, and teaching materials. The content I have written is primarily for my own reference, but anyone is welcome to understand and learn from it. I often share content made with LaTeX. You can find the source code for these documents in this [repository](https://github.com/Abhishek9824/biophysics/tree/main/LaTex), with each one titled accordingly.
 
 
-Before Meta, I was at GoDaddy helping build a deep learning platform
-for predicting small business behavior and personalizing experiences across
-the company.  I also created [GoDaddy Domain Appraisals], which uses neural
-networks to predict the resale value of a domain name better than a human
-expert.  I joined GoDaddy in 2013 as part of the [acquisition] of the startup
-[Locu], which I joined in 2011 while I was simultaneously getting my Ph.D. at
-[MIT][MIT] [CSAIL].
 
-I did my Ph.D. dissertation in the [Commit] group led by [Saman Amarasinghe].
-I started the [OpenTuner] project, an extensible framework for program
-autotuning.  I also created the [PetaBricks] programming language, a language
-that incorporates algorithmic choices to allow an integrated autotuner to
-explore search spaces of program implementations.  As an undergraduate, I did
-research with [Gene Cooperman] and helped create [DMTCP], a user-level
-distributed checkpoint/restart system.
-
-
-[GoDaddy Domain Appraisals]: https://www.godaddy.com/engineering/2019/07/26/domain-name-valuation/
-[acquisition]: http://allthingsd.com/20130819/godaddy-acquires-merchant-finder-startup-locu-for-70-million/
-[CSAIL]: http://www.csail.mit.edu/
-[DMTCP]: http://dmtcp.sourceforge.net/
-[Gene Cooperman]: http://www.ccs.neu.edu/home/gene/
-[Locu]: http://locu.com/
-[MIT]: http://www.mit.edu/
-[OpenTuner]: http://opentuner.org/
-[PetaBricks]: http://projects.csail.mit.edu/petabricks/
-[Commit]: http://groups.csail.mit.edu/commit/
-[Saman Amarasinghe]: http://people.csail.mit.edu/saman/
-[PyTorch]: https://github.com/pytorch/pytorch/
-[TorchDynamo]: https://pytorch.org/docs/master/dynamo/
-[TorchInductor]: https://dev-discuss.pytorch.org/t/torchinductor-a-pytorch-native-compiler-with-define-by-run-ir-and-symbolic-shapes/747
-[Triton]: https://github.com/openai/triton
-[PyTorch 2.0]: https://pytorch.org/get-started/pytorch-2.0/
-[Helion]: https://helionlang.com/
