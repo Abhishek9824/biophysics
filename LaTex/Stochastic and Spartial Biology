@@ -1,0 +1,457 @@
+\documentclass{beamer}
+\usepackage{graphicx} % Required for inserting images
+\usefonttheme{serif}
+\title{Stochastic and Spartial Biology}
+\author{Abhishek Biswas}
+\date{July 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Introduction to Stochastic Process}
+       A stochastic process is a mathematical model that describes how a random variable changes over time (or space). In biological context, you can definite it as the process whose future behaviour is not completely predictable because it involves randomness.
+       \begin{itemize}
+           \item     A stochastic process is a collection of random variables $\{~x(t), t\in T~\}$ where, $x(t)$ is an \textbf{random variables} representing the state of the function at \textbf{time} $t$.\\[2pt]
+
+
+
+              \item  In addition, a stochastic process may be collection of random vectors. For examples, two random variables is a collection of random vectors $\{(X(t), Y(t)), t\in T\}$. % I will add examples for defn  
+              
+       \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Reaction Diffusion Equation}
+    Chemotaxis is the directed movement of cells in response to a chemical concentration gradient. Unlike diffusion, where particles move from a region of higher concentration to lower concentration, chemotaxis allows cells to move up the concentration gradient, i.e., towards a higher concentration of a chemical attractant. This directional movement enables cells to locate food sources, sites of infection, or other biologically important signals.
+    \begin{itemize}
+        \item Directed movement due to chemical signals.
+        \item Movement occurs towards increasing attractant concentration.
+        \item Different from diffusion, which is random and moves down the concentration gradient.
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Random Walk}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Definition}
+
+\begin{frame}{Random Walk}
+
+\begin{block}{Definition}
+A \textbf{random walk} is a stochastic process in which a particle (or animal) moves in discrete steps. At every time interval $\tau$, the particle takes a step of fixed length $\delta$ either to the left or to the right with equal probability.
+\end{block}
+
+\vspace{0.3cm}
+
+\begin{columns}
+
+\column{0.55\textwidth}
+
+\begin{itemize}
+    \item One-dimensional motion.
+    \item Initial position:
+    \[
+    x(0)=0.
+    \]
+    \item Step length:
+    \[
+    \delta
+    \]
+    \item Time per step:
+    \[
+    \tau
+    \]
+    \item Equal probability of moving in either direction:
+    \[
+    P(+\delta)=\frac12,\qquad
+    P(-\delta)=\frac12.
+    \]
+\end{itemize}
+
+\column{0.45\textwidth}
+
+\centering
+
+\begin{tikzpicture}[scale=0.9]
+
+\draw[-{Latex}] (-2.6,0)--(2.6,0);
+
+\foreach \x/\lab in {-2/-2$\delta$,-1/-$\delta$,0/0,1/$\delta$,2/2$\delta$}
+{
+\draw (\x,0.12)--(\x,-0.12);
+\node[below] at (\x,-0.12){\lab};
+}
+
+\node[above] at (1,0.45)
+{$P(+\delta)=\dfrac12$};
+
+\node[above] at (-1,0.45)
+{$P(-\delta)=\dfrac12$};
+
+\end{tikzpicture}
+
+\end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Mathematical Description}
+
+\begin{frame}{Mathematical Description of a Random Walk}
+
+Suppose the position of the $i^{\text{th}}$ particle after the $n^{\text{th}}$ step is denoted by
+
+\[
+x_i(n).
+\]
+
+After one additional step, the particle can move either to the left or to the right by one step length $\delta$. Hence,
+
+\[
+\boxed{
+x_i(n)=x_i(n-1)\pm\delta
+}
+\]
+
+where
+
+\begin{itemize}
+    \item $x_i(n)$ : Position after the $n^{\text{th}}$ step.
+    \item $x_i(n-1)$ : Position after the previous step.
+    \item $\delta$ : Fixed step length.
+    \item The "$+$" sign corresponds to a right step.
+    \item The "$-$" sign corresponds to a left step.
+\end{itemize}
+
+Since both directions are equally likely,
+
+\[
+P(+\delta)=P(-\delta)=\frac12.
+\]
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Mean Displacement}
+
+\begin{frame}{Derivation of the Mean Displacement}
+
+To determine the average displacement after $n$ steps, we average over all $N$ particles,
+
+\[
+\boxed{
+\left\langle x_i(n)\right\rangle
+=
+\frac1N
+\sum_{i=1}^{N}
+x_i(n)
+}
+\]
+
+Using the random walk relation,
+
+\[
+x_i(n)=x_i(n-1)\pm\delta,
+\]
+
+we obtain
+
+\[
+\left\langle x_i(n)\right\rangle
+=
+\frac1N
+\sum_{i=1}^{N}
+\left[
+x_i(n-1)\pm\delta
+\right].
+\]
+
+\pause
+
+Since left and right movements occur with equal probability,
+
+\[
+\boxed{
+\langle\pm\delta\rangle=0.
+}
+\]
+
+Therefore,
+
+\[
+\boxed{
+\left\langle x_i(n)\right\rangle
+=
+\left\langle x_i(n-1)\right\rangle.
+}
+\]
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Interpretation of the Mean Displacement}
+
+\begin{block}{Why is the average step equal to zero?}
+
+Each step has two possible outcomes:
+
+\[
++\delta
+\qquad\text{or}\qquad
+-\delta
+\]
+
+with equal probability,
+
+\[
+P(+\delta)=P(-\delta)=\frac12.
+\]
+
+Hence,
+
+\[
+\langle\pm\delta\rangle
+=
+\frac12(\delta)
++
+\frac12(-\delta)
+=0.
+\]
+
+Therefore, there is \textbf{no preferred direction of motion}. The particle is equally likely to move left or right, so the average displacement remains unchanged after every step.
+
+\end{block}
+
+\begin{alertblock}{Important Result}
+
+Although the average displacement is zero, this does \textbf{not} imply that the particle does not move. Instead, the particle spreads away from its initial position. To quantify this spread, we calculate the \textbf{mean square displacement (MSD)}.
+
+\end{alertblock}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Mean Square Displacement}
+
+\begin{frame}{Mean Square Displacement (MSD)}
+
+The mean displacement does not provide information about how far the particles spread from their initial position. To quantify the spread, we calculate the \textbf{Mean Square Displacement (MSD)}.
+
+\vspace{0.2cm}
+
+Starting from the random walk equation,
+
+\[
+x_i(n)=x_i(n-1)\pm\delta,
+\]
+
+we square both sides,
+
+\[
+x_i^2(n)
+=
+\left[x_i(n-1)\pm\delta\right]^2.
+\]
+
+Expanding,
+
+\[
+\boxed{
+x_i^2(n)
+=
+x_i^2(n-1)
+\pm
+2x_i(n-1)\delta
++\delta^2.
+}
+\]
+
+\begin{block}{Next Step}
+Average the above expression over all particles to obtain the mean square displacement.
+\end{block}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Averaging the Squared Displacement}
+
+Taking the ensemble average,
+
+\[
+\left\langle x_i^2(n)\right\rangle
+=
+\frac{1}{N}
+\sum_{i=1}^{N}
+x_i^2(n),
+\]
+
+and substituting the expanded expression,
+
+\[
+\left\langle x_i^2(n)\right\rangle
+=
+\frac{1}{N}
+\sum_{i=1}^{N}
+\left[
+x_i^2(n-1)
+\pm
+2x_i(n-1)\delta
++
+\delta^2
+\right].
+\]
+
+Separating each term,
+
+\[
+\boxed{
+\left\langle x_i^2(n)\right\rangle
+=
+\left\langle x_i^2(n-1)\right\rangle
++
+\left\langle
+2x_i(n-1)(\pm\delta)
+\right\rangle
++
+\delta^2.
+}
+\]
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Why Does the Cross Term Vanish?}
+
+Since each step has equal probability of moving left or right,
+
+\[
+P(+\delta)=P(-\delta)=\frac12,
+\]
+
+the average step is
+
+\[
+\langle\pm\delta\rangle=0.
+\]
+
+Hence,
+
+\[
+\boxed{
+\left\langle
+2x_i(n-1)(\pm\delta)
+\right\rangle
+=
+0.
+}
+\]
+
+Therefore,
+
+\[
+\boxed{
+\left\langle x_i^2(n)\right\rangle
+=
+\left\langle x_i^2(n-1)\right\rangle
++\delta^2.
+}
+\]
+
+This is the fundamental recursion relation for the mean square displacement.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Recursive Evaluation of MSD}
+
+Using the recursion relation repeatedly,
+
+\[
+\begin{aligned}
+\langle x_i^2(0)\rangle &=0,\\[0.2cm]
+\langle x_i^2(1)\rangle &=\delta^2,\\[0.2cm]
+\langle x_i^2(2)\rangle &=2\delta^2,\\[0.2cm]
+\langle x_i^2(3)\rangle &=3\delta^2,\\
+&\vdots
+\end{aligned}
+\]
+
+we obtain
+
+\[
+\boxed{
+\left\langle x_i^2(n)\right\rangle
+=
+n\delta^2.
+}
+\]
+
+\begin{alertblock}{Observation}
+
+The mean square displacement increases linearly with the number of steps.
+
+\end{alertblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Relation Between MSD and Time}
+
+Each step requires a constant time interval $\tau$.
+
+Hence,
+
+\[
+t=n\tau,
+\]
+
+or equivalently,
+
+\[
+n=\frac{t}{\tau}.
+\]
+
+Substituting into the MSD expression,
+
+\[
+\boxed{
+\left\langle x_i^2(t)\right\rangle
+=
+\frac{\delta^2}{\tau}t.
+}
+\]
+
+Define the diffusion coefficient as
+
+\[
+\boxed{
+D=\frac{\delta^2}{2\tau}.
+}
+\]
+
+Therefore,
+
+\[
+\boxed{
+\left\langle x_i^2(t)\right\rangle
+=
+2Dt.
+}
+\]
+
+\begin{block}{Final Result}
+
+The mean square displacement grows linearly with time, which is the characteristic signature of diffusive motion.
+
+\[
+\boxed{
+\left\langle x_i^2(t)\right\rangle=2Dt
+}
+\]
+
+\end{block}
+
+\end{frame}
+
+\end{document}
