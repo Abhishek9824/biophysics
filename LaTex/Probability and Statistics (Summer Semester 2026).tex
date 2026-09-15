@@ -1,0 +1,340 @@
+\documentclass{beamer}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsthm} 
+\usepackage{amsmath, amssymb}
+\usepackage{xcolor}
+\usetheme{SimpleDarkBlue}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent}
+\usefonttheme{serif}
+\title{Probability and Statistics}
+
+\author{Abhishek Biswas}
+
+%\textLast Update: 27 August 2026}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\begin{frame}{Table of Contents}
+    \tableofcontents
+\end{frame}
+\section{Statstics}
+\begin{frame}{Descriptive Statistics}
+\begin{itemize}
+    \item \textbf{Population $(N)$:} is the entire group of individuals or observation that you want to study.
+    \item \textbf{Sample $(n)$:} It is the subset of the population that is selected to represent the whole population.
+    \item \textbf{Control:} Group serves as a baseline for comparison by not receiving that specific intervention.
+    \item \textbf{Treated:} A treatment group receives the specific intervention being tested.
+\end{itemize}
+    \vspace{0.5cm}
+
+    \begin{alertblock}{Note}
+    While, preparing the sample from the population we should ensure random selection, proper and well defined exclusion and inclusion criteria and distribution should remain consistent.
+    \end{alertblock}
+\end{frame}
+\begin{frame}{Mean, Mode, Median}
+
+    The arithmetic mean is the sum of all observations divided by the number of observations $(n)$. Calculated by
+    \begin{equation}
+        \bar{x}=\frac{1}{n}\sum_{i=1}^{n} x_i
+    \end{equation}
+
+    Median is defined as the middle value of data set when the observations are arranged either in ascending  or descending order. The sample median is \vspace{0.3cm}
+    \begin{itemize}
+        \item The $(\frac{n+1}{2})^{th}$ largest observation, if $n$ is odd.\vspace{0.3cm}
+        \item The average of the $(\frac{n}{2})^{th}$ and $(\frac{n}{2}+1)^{th}$ largest observations, if $n$ is even. 
+    \end{itemize}
+
+ 
+    \end{frame}
+    
+\begin{frame}{Mean, Mode, Median}   
+    \begin{example}[If $n$ is odd number]
+    A student measures petiole length (in mm) of 5 leaves. Calculate the median.
+    \begin{center}
+        10, 12, 13, 15, 17
+    \end{center}
+        Since, the no. of observation $n= 5$. If you the apply the formula for odd number.
+        \begin{equation}
+            (\frac{5+1}{2})^{th}= 3^{th}
+        \end{equation}
+        observation is your mean value, which in this example is \textbf{13}.
+    \end{example}
+    \begin{example}
+
+    \end{example}
+\end{frame}
+
+
+\section{Probability}
+\subsection{Introduction to Probability}
+\begin{frame}{Introduction to Probability}
+Probability describes the likelihood of particular outcome for an experiment.
+
+\begin{definition}
+    Probability is a numerical measure of how likely an event is to occur. It is define for an single event.
+    \begin{equation}
+        0\leq Pr(A) \leq1
+    \end{equation}
+    \begin{itemize}
+        \item $0\xrightarrow{}$ the event is impossible.
+        \item $1\xrightarrow{}$ certain
+    \end{itemize}
+\end{definition}
+\begin{example} [If you toss a coin, what is probability of getting heads]   
+    There is only one favourable outcome which is heads. Total outcomes is (2) either heads and tails. So then, $Pr(H)=0.5$
+\end{example}
+\end{frame}
+\begin{frame}{Basic Definition}
+\begin{itemize}
+    \item \textbf{Random variable:} A random variable is a variable that assigns a numerical value to each possible outcome of a random experiment. Let,\textbf{ X} be a random variable where X can be number of mutation in a cell, number of bacterial colonies on a plate, etc.\vspace{0.2cm}
+    \item \textbf{Probability Distribution:} It explains how is probability is spread actoss the all possible values of a random variables. \vspace{0.2cm}
+    \item \textbf{Event:} The result of a single observation or the outcome of a measurment is called as event. For examples, when a migrating bird is seen to select a direction suppose northeast or southwest. 
+    \vspace{0.2cm}
+    \item \textbf{Sample space:} The sample space is the set of all possible outcomes.
+\end{itemize}
+
+    
+\end{frame}
+
+    
+
+
+\begin{frame}{Complement of an event}
+    The probability of getting A is $x$ . Then the probability of getting not A will be called as it complement.
+    \begin{example}
+        Suppose, in a experiment of isolating resistant bacteria from antibiotics will be $Pr(A)=x$. What will the Probability of getting a non-antibiotics resistant bacteria will $Pr(A^c)=1-x$
+    \end{example}\vspace{0.5cm}
+    If the probability of getting a postive test is $Pr(+test)= 0.6$. Then what will the $Pr(-test)$ ?
+\end{frame}
+\begin{frame}{Mutually Exclusive Event}
+When you roll a die, you cannot obtain both a 5 and a 6 in a single throw. Similarly, if you toss a coin, you cannot get both heads and tails at the same time. These event are called as Mutually exclusive. \vspace{0.3cm}   \begin{definition}
+        Two events A and B are mutually exclusive if they cannot both happen at the same time. Also, for mutually exclusive event their $(A\cap B)=0$.
+    \end{definition}
+    \begin{equation}
+        Pr(A \cup B)=Pr(A)+Pr(B)
+    \end{equation}
+    \begin{example}
+        A person cannot have two blood group at the same time. 
+    \end{example}
+
+\end{frame}
+\begin{frame}{Non-Mutually Exclusive Event}
+Now, if there are 5 student out of which 3 studies chemistry and 2 studies biology. They can student those who studies chemistry and biology together. These event can be called as non-mutually exclusive in nature. \vspace{0.3cm}
+\begin{definition}
+    A and B are non-mutually exclusive events, if both events can occur together in a single experiment or trial. Their $(A\cap B)\neq 0$
+\end{definition}
+\begin{equation}
+            Pr(A \cup B)=Pr(A)+Pr(B)-Pr(A\cap B)
+\end{equation}
+    \begin{example}
+        Blood group of a person, protein can have both $\alpha$-helix and $\beta$-sheet.
+    \end{example}
+\end{frame}
+\begin{frame}{Independent Event}
+    
+\end{frame}
+\subsection{Conditional Probability}
+\begin{frame}{Conditional Probability}
+    The conditional probability of A given B, written $Pr(A|B)$ stands  fraction of the time that A occurs once we already know that B already occurred. 
+    \begin{definition}
+        Given two events A and B, with $Pr(B)> 0$ the conditional probability of A given B is equal to
+        \begin{equation}
+            Pr(A|B)=\frac{Pr(A\cap B)}{Pr(B)}
+        \end{equation}
+        
+        
+    \end{definition}
+    \begin{example}
+        
+    \end{example}
+\end{frame}
+\begin{frame}{Contingency table: Solved Example}
+    \begin{table}[]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{} & \textbf{Disease} & \textbf{No Disease} & \textbf{Total}\\
+        \hline
+        Test$+$ & 90 & 45 & 135\\
+        \hline
+        Test$-$ & 10 & 855 & 865\\
+        \hline
+         Total& 100 & 900 & 1000\\
+         \hline
+    \end{tabular}
+    
+\end{table}
+\vspace{0.3cm}
+Calculate the $Pr(D|Test+)$ ?
+\begin{equation}
+    Pr(D|Test+) = \frac{90}{135} =0.667 \sim 66.7\%
+\end{equation}
+\vspace{0.3cm}
+Calculate the $Pr(Test+|D)$ ?
+\begin{equation}
+    Pr(Test+\vert ~D) = \frac{90}{100} =0.9 \sim 90\%
+\end{equation}
+\end{frame}
+
+\begin{frame}{Contingency table: Unsolved Example}
+
+    
+\end{frame}
+\subsection{Probability Distribution}
+\begin{frame}{Probability Distribution}
+\begin{flushleft}
+\hspace{0.4cm}
+A probability distribution is a description that gives the
+probability for each value of the random variable. It is often
+expressed in the format of a table, formula, or graph.
+\end{flushleft}
+\begin{itemize}
+    \item A \textbf{discrete random variable} has a collection of data which is finite or countable. For discrete random variable binomial distribution, poisson distribution.
+    \item A \textbf{continuous random variable} has infinitely many values and the collection of values is not countable.
+\end{itemize}
+\begin{alertblock}{Note}
+    \begin{itemize}
+        
+        \item $0 \leq Pr(x) \leq1$ for every individual value of the random variable $x$ which means each probability value must be between the range.
+        \item $\sum  Pr(x)=1$ where x assumes all possible values. The sum of all probabilites such as 0.999 or 1.001 are also acceptable because they result from rounding errors.
+        
+    \end{itemize}
+\end{alertblock}
+   
+\end{frame}
+
+\begin{frame}{Parameters of PD}
+Probability distribution is primarily applicable to population not sample. The values of the mean, standard deviation and variance are parameter of a discrete probability distribution can be calculated using formulas.
+    \begin{itemize}
+        \item \textbf{Mean} ($\mu$) for a probability distribution
+        \begin{equation}
+            \mu=\sum x \cdot Pr(x)
+        \end{equation}
+        \item \textbf{Variance} ($\sigma^2$) for a probability distribution
+        \begin{equation}
+            \sigma^2=\sum~[~x^2\cdot Pr(x)~]~-\mu^2
+        \end{equation}
+        \item \textbf{Standard deviation ($\sigma$)} for a probability distribution
+        \begin{equation}
+            \sigma=\sqrt{\sum~[~x^2\cdot Pr(x)~]~-\mu^2}
+        \end{equation}
+    \end{itemize}
+\end{frame}
+\subsubsection{Binomial Proability Distribution}
+\begin{frame}{Binomial Probability Distribution}
+It allow us to deal with circumstances in which the outcomes belong to only two categories such as fever/no fever, survived/died, acceptable/defective. \vspace{0.2cm}
+\begin{itemize}
+    \item It should have fixed number of trials, $n$
+    \item The trials must be independent.
+    \item Each trial must have all outcomes classified into exactly two categories.
+    \item The Probability of a success remains the same in all trials. 
+\end{itemize}\vspace{0.3cm}
+    \begin{equation}
+        Pr(S)=p
+    \end{equation}
+    \begin{equation}
+        Pr(F)= 1-p= q
+    \end{equation}
+    \end{frame}
+
+    \begin{frame}{Binomial Probability Distribution}
+        \begin{equation}
+            X \sim Bin(n,p)
+        \end{equation}
+
+            Where,
+    \[
+\begin{aligned}
+n & : \text{total numbers of trials}\\
+p & : \text{Probability of success on one trial}\\
+
+\end{aligned}
+\]
+\begin{equation}
+Pr(X)=
+    \begin{pmatrix}
+        n\\
+        x
+        
+    \end{pmatrix}p^x q^{n-x}=\frac{n!}{(n-x)!x!}\cdot p^x q^{n-x}
+\end{equation}
+            Where,
+    \[
+\begin{aligned}
+n & : \text{numbers of trials}\\
+p & : \text{probability of success on one trial}\\
+x & : \text{number of successes among $n$ trial}\\
+p & : \text{probability of success in any one trial}\\
+q & : \text{probability of failure in any one trial}\\
+\end{aligned}
+\]
+    \end{frame}
+
+    \begin{frame}{Binomial Probability Distribution}
+        \begin{itemize}
+            \item Mean for a binomial probability distribution
+            \begin{equation}
+                \mu=np
+            \end{equation}
+            \item Variance for a binomial probability distribution
+            \begin{equation}
+                \sigma^2=np(1-p)
+            \end{equation}
+            \item Standard deviation for a binomial probability distribution
+            \begin{equation}
+                \sigma=\sqrt{np(1-p)}
+            \end{equation}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Binomial Probability Distribution}
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.8\linewidth]{download.png}
+            \caption{Binomial Distribution}
+            \label{fig:Binomial Distribution}
+        \end{figure}
+    \end{frame}
+\begin{frame}{Unsolved Examples}
+\textbf{Q1.} Assuming that the probability of a pea having a green pod is 0.75, use the binomial probability formula to find the probability of getting exactly 3 peas with green pods when 5 offspring peas are generated. That is, find $Pr(3)$ given that $n$= 5, $x$=3, $p$= 0.75 and $q$= 0.25.\vspace{0.3cm}
+
+\textbf{Q2.
+}A genetic mutation occurs in a particular gene with a probability of 0.2 in each independently sampled cell. Suppose 10 cells are randomly selected. Using the binomial distribution, calculate: \vspace{0.1cm}
+
+(a) The probability that exactly 3 cells carry the mutation.\\\vspace{0.1cm}
+(b) The probability that at least 1 cell carries the mutation.\\\vspace{0.1cm}
+(c) The probability that at most 2 cells carry the mutation.\\\vspace{0.1cm}
+(d) Calculate mean, variance and standard deviation.
+    
+\end{frame}
+
+
+    \begin{frame}{How does probability affect the shape?}
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.8\linewidth]{binomialdis.png}
+            
+            \label{fig:placeholder}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}{How does $n$ affect the shape?}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{binomial2b-1.png}
+        \footnotemark
+
+\footnotetext{\tiny{}
+}        \label{fig:placeholder}
+    \end{figure}
+        
+    \end{frame}
+\subsubsection{Poisson Distribution}
+\begin{frame}{Poisson Distribution}
+    
+\end{frame}
+\end{document}
